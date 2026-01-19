@@ -211,7 +211,7 @@
 
 .footer__save-button {
   display: flex;
-  display: row;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
