@@ -86,35 +86,35 @@
 
 /*Фильтры картинки*/
 
-.work__preparation {
+.filter-hue-rotate {
   filter: hue-rotate(-130deg);
 }
 
-.clean__slate {
+.filter-opacity {
   filter: opacity(0.7);
 }
 
-.first__victory {
+.filter-brightness-contrast {
   filter: brightness(250%) contrast(120%);
 }
 
-.chase {
+.filter-invert {
   filter: invert(0.9);
 }
 
-.friends {
+.filter-saturate {
   filter: saturate(158%);
 }
 
-.changes {
+.filter-blur-hue-rotate {
   filter: blur(3px) hue-rotate(30deg);;
 }
 
-.tired__dog {
+.filter-grayscale-drop-shadow {
   filter: grayscale(0.9) drop-shadow(0 10px 5px rgba(0, 0, 0, 0.5));;
 }
 
-.here__we__go__again {
+.filter-sepia-brightness {
   filter: sepia(60%) brightness(80%);
 }
 
@@ -192,7 +192,7 @@
 .card__like-button {
   border: var(--border-style);
   background-color: transparent;
-  inline-size: 118px;
+  inline-size: 130px;
   block-size: 38px;
 }
 
@@ -224,11 +224,15 @@
   gap: 8px;
 }
 
-.footer__save-icon {
-  inline-size: 28px;
-  block-size: 28px;
+.save-icon {
   flex-shrink: 0;
-  position: inherit;
+  min-inline-size: 28px;
+  min-block-size: 28px;
+  max-inline-size: 39px;
+  max-block-size: 39px;
+}
+
+.save-icon-button {
   z-index: 3;
   filter: invert(1);
   mix-blend-mode: difference;
@@ -245,7 +249,6 @@
   background-color: #fff;
   border: var(--border-style);
   font-family: var(--accent-font);
-  overflow-x: hidden;
 }
 
 .dialog__content {
@@ -256,12 +259,6 @@
   gap: 20px;
   inline-size: clamp(16.313rem, 15.608rem + 3.005vw, 18.313rem);
   margin-bottom: 30px;
-}
-
-.dialog__save-icon {
-  inline-size: 39px;
-  block-size: 39px;
-  flex-shrink: 0;
 }
 
 .dialog__text {
@@ -313,7 +310,7 @@ dialog::backdrop {
   inset: 0;
   background-color: var(--main-color);
   transform: translateX(-100%);
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease-in-out;
 }
 
 .button-effects:hover::before {
@@ -417,8 +414,4 @@ dialog::backdrop {
   .page {
     overflow-x: auto;
   }
-}
-
-.floppy__svg {
-  display: none;
 }
