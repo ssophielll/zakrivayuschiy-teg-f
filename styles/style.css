@@ -81,7 +81,7 @@
   inline-size: 100%;
   border-top: var(--border-style);
   border-bottom: var(--border-style);
-  margin-bottom: var(--inside-block-margin);
+  margin-bottom: 22px;
 }
 
 /*Фильтры картинки*/
@@ -149,6 +149,7 @@
 .content__card-description {
   display: inline-block;
   margin: 0 var(--inside-block-margin);
+  line-height: 21px;
 }
 
 .content__card-description-paragraph {
@@ -226,13 +227,11 @@
 
 .save-icon {
   flex-shrink: 0;
-  min-inline-size: 28px;
-  min-block-size: 28px;
-  max-inline-size: 39px;
-  max-block-size: 39px;
 }
 
 .save-icon-button {
+  inline-size: 28px;
+  block-size: 28px;
   z-index: 3;
   filter: invert(1);
   mix-blend-mode: difference;
@@ -243,8 +242,6 @@
 .dialog-window {
   padding-top: 30px;
   padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
   inline-size: clamp(21.313rem, 21.048rem + 1.127vw, 22.063rem);
   background-color: #fff;
   border: var(--border-style);
@@ -261,6 +258,12 @@
   margin-bottom: 30px;
 }
 
+.save-icon-dialog {
+  inline-size: 39px;
+  block-size: 39px;
+  flex-shrink: 0;
+}
+
 .dialog__text {
   font-size: var(--accent-font-size);
   font-weight: var(--accent-font-wght);
@@ -269,12 +272,14 @@
 }
 
 .dialog__button {
+  display: flex;
+  justify-self: center;
+  justify-content: center;
   inline-size: clamp(16.313rem, 15.608rem + 3.005vw, 18.313rem);
   border: var(--border-style);
   background-color: transparent;
   padding-top: 12.5px;
   padding-bottom: 12.5px;
-  justify-self: center;
 }
 
 .dialog__button-text {
@@ -399,14 +404,13 @@ dialog::backdrop {
 /*Медиазапросы*/
 
 @media (width >= 1440px) {
-  .footer__save-icon {
-  inline-size: 21px;
-  block-size: 21px;
-  flex-shrink: 0;
-  position: inherit;
-  z-index: 3;
-  filter: invert(1);
-  mix-blend-mode: difference;
+  .save-icon-button {
+    inline-size: 21px;
+    block-size: 21px;
+    position: inherit;
+    z-index: 3;
+    filter: invert(1);
+    mix-blend-mode: difference;
   }
 }
 
